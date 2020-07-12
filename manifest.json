@@ -1,7 +1,7 @@
 {
-  "name": "Getting Started Example",
+  "name": "Watch Party",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Watch stream with someone",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],

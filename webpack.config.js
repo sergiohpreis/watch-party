@@ -6,8 +6,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    popup: './src/index.js',
+    popup: './src/popup.js',
     background: './src/background.js',
+    netflix: './src/actions/netflix/index.js',
   },
   devtool: 'inline-source-map',
   plugins: [
@@ -24,7 +25,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Popup',
-      template: './src/index.html',
+      template: './src/popup.html',
       filename: 'popup.html',
     }),
   ],
