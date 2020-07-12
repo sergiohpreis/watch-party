@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna run bootstrap",
-    "extension:watch": "lerna run watch --stream"
+    "watch": "lerna run watch --stream"
   },
   "keywords": [],
   "author": "",
