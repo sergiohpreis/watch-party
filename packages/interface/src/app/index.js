@@ -5,10 +5,6 @@ import Chat from '../components/Chat';
 import styles from './index.module.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     window.addEventListener(
       'message',

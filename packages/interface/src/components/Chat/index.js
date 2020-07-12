@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import * as listeners from '../../communication/listeners';
-import * as emitters from '../../communication/emitters';
+import * as listeners from '../../socket/listeners';
+import * as emitters from '../../socket/emitters';
 
 import styles from './index.module.css';
 
