@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     popup: './src/popup.js',
     background: './src/background.js',
-    actions: './src/actions/index',
+    api: './src/api/index',
   },
   devtool: 'inline-source-map',
   plugins: [

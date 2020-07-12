@@ -1,7 +1,7 @@
 export const waitForElement = async (reference) => {
   return new Promise((resolve, reject) => {
     const interval = setInterval(() => {
-      if (document.querySelectorAll(reference).length) {
+      if (checkIfElementExists(reference)) {
         clearInterval(interval);
         clearTimeout(autoClearInterval);
         resolve();
@@ -14,3 +14,6 @@ export const waitForElement = async (reference) => {
     }, 10000);
   });
 };
+
+export const checkIfElementExists = (reference) =>
+  document.querySelectorAll(reference).length;

@@ -1,4 +1,4 @@
-const REFERENCES = {
+export const REFERENCES = {
   loading_spinner: '#loading_spinner',
   video_container: '.VideoContainer',
   app_container: '#appMountPoint',
