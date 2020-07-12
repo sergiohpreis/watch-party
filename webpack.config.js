@@ -16,7 +16,7 @@ module.exports = {
       patterns: [
         { from: './manifest.json' },
         { from: './src/images', to: 'images' },
-        { 
+        {
           from: '**/*',
           context: path.resolve(__dirname, 'src', 'options'),
         },
@@ -25,7 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Popup',
       template: './src/index.html',
-      filename: 'popup.html'
+      filename: 'popup.html',
     }),
   ],
   output: {
