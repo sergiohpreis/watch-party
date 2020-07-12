@@ -6,8 +6,8 @@ const io = require('socket.io')(server);
 
 const start = () => {
   io.on('connection', (socket) => {
-    listeners.whenChatMessageReceived(socket, (msg) => {
-      emitters.sendMessageToChat(socket, msg);
+    listeners.whenChatMessageReceived(socket, (message) => {
+      emitters.sendMessageToChat(io, message);
     });
   });
 };

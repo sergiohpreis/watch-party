@@ -26,14 +26,14 @@ class Chat extends Component {
   };
 
   componentDidMount = () => {
-    listeners.whenChatMessageArrive((msg) => {
+    listeners.whenChatMessageArrive((message) => {
       this.setState({
         messages: [
           ...this.state.messages,
           {
             id: 1,
-            nickname: 'Sergio',
-            content: msg,
+            nickname: message.name,
+            content: message.message,
           },
         ],
       });
