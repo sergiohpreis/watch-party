@@ -3,6 +3,6 @@ import * as iframe from '../../iframe/index';
 
 export const startListeners = () => {
   listeners.onPlay(() => {
-    iframe.sendMessage('VIDEO_PLAYED');
+    iframe.send('VIDEO_PLAYED');
   });
 };

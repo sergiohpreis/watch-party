@@ -1,8 +1,8 @@
-import senders from './senders';
+import send from './senders';
+import listen from './listener';
 import * as helpers from './helpers';
 
 export const iframe = document.createElement('iframe');
-export const sendMessage = senders;
 
 export const start = (streamService) => {
   helpers.addStyle(iframe, {
@@ -14,4 +14,7 @@ export const start = (streamService) => {
   });
   helpers.setSrc(iframe, 'http://localhost:3000');
   helpers.appendToApp(iframe, streamService);
+  listen();
 };
+
+export { send };
