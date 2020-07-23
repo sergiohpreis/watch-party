@@ -1,7 +1,9 @@
 export const waitForElement = async (reference) => {
   return new Promise((resolve, reject) => {
     const interval = setInterval(() => {
+      console.log('Searching for', reference);
       if (checkIfElementExists(reference)) {
+        console.log('Found', reference);
         clearInterval(interval);
         clearTimeout(autoClearInterval);
         resolve();
