@@ -4,17 +4,11 @@ import Chat from '../components/Chat';
 
 import styles from './index.module.css';
 
+import * as iframe from '../iframe';
+
 class App extends Component {
   componentDidMount() {
-    window.addEventListener(
-      'message',
-      (message) => {
-        this.setState({
-          status: message.data.status,
-        });
-      },
-      true
-    );
+    iframe.listener();
   }
 
   render() {
