@@ -1,7 +1,9 @@
-document.querySelector('#start-session').addEventListener('click', () => {
+import * as popupActions from '../popup/actions';
+
+popupActions.onStartSession(() => {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.executeScript(tabs[0].id, {
-      file: './api.js',
+      file: './init.js',
     });
   });
 });

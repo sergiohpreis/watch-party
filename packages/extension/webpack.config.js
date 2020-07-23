@@ -6,9 +6,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    popup: './src/popup.js',
-    background: './src/background.js',
-    api: './src/api/index',
+    popup: './src/extension/index.js',
+    background: './src/extension/background.js',
+    init: './src/init.js',
   },
   devtool: 'inline-source-map',
   plugins: [
@@ -16,17 +16,14 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: './manifest.json' },
-        { from: './src/images', to: 'images' },
-        {
-          from: '**/*',
-          context: path.resolve(__dirname, 'src', 'options'),
-        },
+        { from: './images', to: 'images' },
       ],
     }),
     new HtmlWebpackPlugin({
       title: 'Popup',
-      template: './src/popup.html',
+      template: './src/extension/index.html',
       filename: 'popup.html',
+      chunks: ['popup'],
     }),
   ],
   output: {
