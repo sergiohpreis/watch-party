@@ -7,5 +7,5 @@ export const start = (streamService) => {
     },
   };
 
-  return startByStreamService[streamService];
+  return startByStreamService[streamService]();
 };
